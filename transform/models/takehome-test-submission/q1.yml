@@ -1,7 +1,7 @@
 models:
-  - name: q1
+  - name: total_gmv_by_country
     description: >
-      Answer to q1 of take home test
+      Compute the total GMV (gross merchandise volume) by country
     meta:
       owner: gabriellalim@foodpanda.com
     columns:
