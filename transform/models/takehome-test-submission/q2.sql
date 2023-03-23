@@ -15,7 +15,8 @@ WITH vendor_customer_gmv AS (
 
     FROM `majestic-vault-381405`.Orders_Dataset.Orders_Table o
 
-    JOIN `majestic-vault-381405`.Vendors_Dataset.Vendors_Table v ON o.vendor_id = v.id
+    JOIN `majestic-vault-381405`.Vendors_Dataset.Vendors_Table v 
+        ON o.vendor_id = v.id
     
     WHERE v.country_name = 'Taiwan'
     
