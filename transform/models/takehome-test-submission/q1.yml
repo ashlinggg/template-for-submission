@@ -1,0 +1,11 @@
+models:
+  - name: total_gmv_by_country
+    description: >
+      Compute the total GMV (gross merchandise volume) by country
+    meta:
+      owner: gabriellalim@foodpanda.com
+    columns:
+      - country_name
+        description: The name of the country.
+      - total_gmv
+        description: The total GMV in local currency.

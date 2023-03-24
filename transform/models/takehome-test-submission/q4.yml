@@ -1,0 +1,15 @@
+models:
+  - name: top_two_vendors_by_country_year
+    description: >
+      Generates the two most active vendor per country based on total GMV per year
+    meta:
+      owner: gabriellalim@foodpanda.com
+    columns:
+      - year
+        description: The time period.
+      - country_name
+        description: The name of the country.
+      - vendor_name
+        description: The name of the vendor.
+      - total_gmv
+        description: The total GMV in local currency.

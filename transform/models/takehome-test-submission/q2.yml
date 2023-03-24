@@ -1,0 +1,13 @@
+models:
+  - name: vendor_customer_gmv
+    description: >
+      Computes the customer count and total GMV for vendors in Taiwan
+    meta:
+      owner: gabriellalim@foodpanda.com
+    columns:
+      - vendor_name
+        description: The name of the vendor.
+      - customer_count
+        description: The number of unique customers.
+      - total_gmv
+        description: The total GMV in local currency.
