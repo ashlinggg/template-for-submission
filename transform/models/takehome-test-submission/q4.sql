@@ -36,18 +36,22 @@ ranked_vendor_gmv AS (
         ) AS vendor_rank
   
     FROM yearly_vendor_gmv
+),
+
+top_two_vendors_by_country_year AS(
+    SELECT
+    
+        CONCAT(CAST(year AS STRING), "-01-01T00:00:00") AS year,
+  
+        country_name,
+        vendor_name,
+        total_gmv
+    
+        FROM ranked_vendor_gmv
+
+        WHERE vendor_rank <= 2
+
+        ORDER BY year, country_name, vendor_rank
 )
 
-SELECT
-    
-    CONCAT(CAST(year AS STRING), "-01-01T00:00:00") AS year,
-  
-    country_name,
-    vendor_name,
-    total_gmv
-    
-    FROM ranked_vendor_gmv
-
-    WHERE vendor_rank <= 2
-
-    ORDER BY year, country_name, vendor_rank;
+SELECT * FROM top_two_vendors_by_country_year
