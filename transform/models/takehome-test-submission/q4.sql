@@ -15,9 +15,9 @@ WITH yearly_vendor_gmv AS (
     
         ROUND(SUM(o.gmv_local), 2) AS total_gmv
   
-    FROM `majestic-vault-381405.Orders_Dataset.Orders_Table` o
+    FROM `majestic-vault-381405`.Orders_Dataset.Orders_Table o
   
-    JOIN `majestic-vault-381405.Vendors_Dataset.Vendors_Table` v
+    JOIN `majestic-vault-381405`.Vendors_Dataset.Vendors_Table v
         ON o.vendor_id = v.id
   
     GROUP BY v.country_name, v.vendor_name, year
