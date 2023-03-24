@@ -1,0 +1,11 @@
+models:
+  - name: top_country
+    description: >
+      Generates the country with highest total GMV (gross merchandise volume) 
+    meta:
+      owner: gabriellalim@foodpanda.com
+    columns:
+      - country_name
+        description: The name of the country.
+      - total_gmv
+        description: The total GMV in local currency.

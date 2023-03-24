@@ -1,20 +1,14 @@
-WITH top_countries AS (
+WITH top_country AS (
   
   SELECT 
     country_name, 
-    total_gmv,
+    total_gmv
     
-    RANK() OVER (ORDER BY total_gmv DESC) as gmv_rank
-  
-  FROM {{ ref('total_gmv_by_country') }}
- 
-  WHERE total_gmv > 1000
+    FROM {{ ref('total_gmv_by_country') }}
+    
+    ORDER BY total_gmv desc
+    
+    LIMIT 1
 )
 
-SELECT 
-  country_name, 
-  total_gmv
-
-FROM top_countries
-
-WHERE gmv_rank <= 3
+SELECT * FROM top_country;
