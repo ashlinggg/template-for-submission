@@ -1,3 +1,10 @@
+{{
+    config(
+        materialized='view'
+    )
+}}
+
+
 WITH top_country AS (
   
   SELECT 
